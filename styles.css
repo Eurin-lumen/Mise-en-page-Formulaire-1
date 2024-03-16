@@ -40,19 +40,19 @@ textarea {
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Affiche les boutons en ligne côte à côte */
+    width: auto; /* Largeur automatique pour s'ajuster au contenu */
+    padding: 10px; /* Ajoute un espace intérieur de 10 pixels aux boutons */
+    border: none; /* Supprime la bordure par défaut des boutons */
+    background-color: #007bff; /* Couleur de fond du bouton Envoyer */
+    color: #fff; /* Couleur du texte du bouton Envoyer */
+    border-radius: 3px; /* Arrondit les coins des boutons */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transition en douceur des propriétés */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Nouvelle couleur de fond au survol */
 }
 
 input:invalid,
@@ -62,5 +62,12 @@ textarea:invalid {
 
 input:invalid:focus,
 textarea:invalid:focus {
-    box-shadow: 0 0 5px #dc3545;
+    box-shadow: 0 0 5px #83434a;
+}
+
+/* Style spécifique pour le bouton Réinitialiser */
+button[type="reset"] {
+    background-color: #ce1a1a; /* Couleur de fond du bouton Réinitialiser */
+    color: #ededed; /* Couleur du texte du bouton Réinitialiser */
+    margin-left: 10px; /* Marge à gauche pour séparer les boutons */
 }
