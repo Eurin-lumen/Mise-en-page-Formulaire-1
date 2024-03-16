@@ -23,30 +23,30 @@
     }
 
     .form-group {
-        margin-bottom: 20px;
+        display: flex; /* Use flexbox for horizontal layout */
+        align-items: center; /* Align labels and inputs vertically */
+        margin-bottom: 10px; /* Add spacing between groups */
     }
 
-    label {
-        display: block;
+    .form-group label {
+        flex: 0 0 30%; /* Set label width to 30% */
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-right: 10px; /* Add spacing between label and input */
     }
 
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 100%;
         padding: 10px;
         border-radius: 3px;
         border: 1px solid #ccc;
         box-sizing: border-box;
+        flex: 1; /* Make inputs fill remaining space */
     }
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-        outline: none;
-        border-color: dodgerblue;
+    .card {
+        border: none; /* Remove card border as it's not needed now */
+        padding: 0; /* Remove card padding */
     }
 
     .btn-submit {
@@ -54,9 +54,10 @@
         color: #fff;
         border: none;
         border-radius: 3px;
-        padding: 10px 20px;
+        padding: 10px 0;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        width: 100%; /* Make button full width */
     }
 
     .btn-submit:hover {
